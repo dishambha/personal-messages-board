@@ -1,4 +1,4 @@
-const API_URL = "http://127.0.0.1:8000/messages";
+const API_URL = "https://personal-messages-board-1.onrender.com/messages";
 
 const form = document.getElementById("messageForm");
 const nameInput = document.getElementById("name");
