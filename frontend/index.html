@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Write Something About Me</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="background-gradient"></div>
+
+    <div class="container">
+      <div class="header">
+        <h1>✨ Write Something About Me</h1>
+        <p class="subtitle">Be honest. Be kind. Be real.</p>
+      </div>
+
+      <form id="messageForm" class="message-form">
+        <div class="input-group">
+          <label for="name">Your Name</label>
+          <input
+            type="text"
+            id="name"
+            placeholder="Enter your name (optional)"
+          />
+        </div>
+
+        <div class="input-group">
+          <label for="emotion">Message Vibe</label>
+          <select id="emotion">
+            <option value="">Choose a vibe...</option>
+            <option value="funny">😄 Funny</option>
+            <option value="kind">💙 Kind</option>
+            <option value="honest">🪞 Honest</option>
+            <option value="inspiring">✨ Inspiring</option>
+            <option value="respect">🫡 Respect</option>
+            <option value="grateful">🙏 Grateful</option>
+            <option value="supportive">🤗 Supportive</option>
+          </select>
+        </div>
+
+        <div class="input-group">
+          <label for="message">Your Message</label>
+          <textarea
+            id="message"
+            placeholder="Share your thoughts..."
+            required
+          ></textarea>
+          <div class="char-count"><span id="charCount">0</span> characters</div>
+        </div>
+
+        <div class="checkbox-group">
+          <label class="checkbox-label">
+            <input type="checkbox" id="isAnonymous" />
+            <span class="checkbox-custom"></span>
+            <span class="checkbox-text">Post anonymously</span>
+          </label>
+        </div>
+
+        <button type="submit" id="submitBtn" class="submit-btn">
+          <span class="btn-text">Send Message</span>
+          <span class="btn-icon">→</span>
+        </button>
+      </form>
+
+      <div class="messages-section">
+        <div class="messages-header">
+          <h2>💬 Messages</h2>
+          <div class="message-count">
+            <span id="messageCount">0</span> messages
+          </div>
+        </div>
+        <div id="messages" class="messages-container"></div>
+        <div id="emptyState" class="empty-state">
+          <div class="empty-icon">💭</div>
+          <p>No messages yet. Be the first to share!</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
